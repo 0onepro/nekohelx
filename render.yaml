@@ -5,8 +5,6 @@ services:
     image: ghcr.io/m1k1o/neko/firefox:latest
     plan: free
     autoDeploy: true
-    ports:
-      - 8080
     envVars:
       - key: NEKO_DESKTOP_SCREEN
         value: 1920x1080@30
@@ -17,4 +15,6 @@ services:
       - key: NEKO_WEBRTC_EPR
         value: 52000-52100
       - key: NEKO_WEBRTC_ICELITE
-        value: "1"
+        value: 1
+    ports:
+      - 8080
